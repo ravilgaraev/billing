@@ -1,0 +1,143 @@
+.go-up, .go-down {
+ display: none;
+ position: fixed; /*позиционирование*/
+ z-index: 9999; /*поверх все элементов на странице*/
+ right: 2%; /*положение на странице, если слева - left*/
+ background: #4F4F4F;
+ border: 1px solid #ccc;
+ border-radius: 5px;
+ cursor: pointer;
+ color: #fff;
+ text-align: center;
+ font: normal normal 38px/38px sans-serif;
+ text-shadow: 0 1px 2px #000;
+ opacity: .5;
+ padding: 3px;
+ margin-bottom: 5px;
+ width: 50px;
+ height: 50px;
+}
+.go-up { bottom: 200px; }
+.go-down { bottom: 150px; }
+.go-down:hover,
+.go-up:hover {
+ opacity: 1;
+ box-shadow: 0 5px 0.5em -1px #666;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 150px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  left: 10px;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 150px;
+  background-color: #fff;
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.table_otchet {
+    margin: 15px !important;
+}
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+.logo {
+width: 80%;
+    margin: 10px 10px 10px 10px;
+}
+.menu-table {
+    padding: 2px !important;
+    padding-left: 10px !important;
+}
+.menu-table:hover {
+    background-color: skyblue !important;
+}
+.menu-table a:hover {
+    color: white !important;
+}
+.table_info {
+    padding: 2px !important;
+    padding-left: 8px !important;
+    font-size: 12px;
+}
+.table_info_30 {
+    padding: 2px !important;
+    padding-left: 8px !important;
+    font-size: 12px;
+    width: 25%;
+}
+.table-chetf {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 12px;
+    border: 1px;
+    border-color: yellow;
+}
+.logo_sf {
+    width: 900px;
+    margin-left: 5px;
+}
+.img_sf {
+    width: 110%;
+    margin-top: 5px;
+}
+.img_sfx {
+    width: 110%;
+    margin-top: 5px;
+    float: right;
+}
+.text_left {
+    align: left;
+}
+.user_reg {
+    padding-top: 7px;
+    padding-right: 0;
+}
+.table_sf {
+    border-style: solid;
+    border-width: 1px;
+    width: 350px;
+}
+.table_schet {
+    width: 900px;
+}
+.odin {
+    padding: 2px;
+    padding-right: 5px;
+    width: 100px;
+    border: 1px solid #000;
+}
+.dva {
+    padding: 2px;
+    padding-left: 5px;
+    width: 300px;
+    border: 1px solid #000;
+}
+.tri {
+    width: 100px;
+}
+.sf {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+.comment {
+    padding-left: 2px !important;
+}
+.table-print>tbody>tr>td {
+    border: 1px solid #000 !important;
+}
+.mail_edit_input {
+    padding: 2px 3px !important;
+}
