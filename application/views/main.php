@@ -93,7 +93,8 @@
             <a href="/printsavesf">Счет-фактуры за отчетный период | </a>
             <a href="/printschetall">Счета | </a>
             <a href="/cashschet">Счет на оплату в кассу | </a>
-            <a href="http://ticket.bcc.uz?luser=<?php echo Cookie::get('user'); ?>" target="_blank" > Тикет </a>
+            <a href="http://ticket.bcc.uz?luser=<?php echo Cookie::get('user'); ?>" target="_blank" > Тикет |</a>
+            <a href="/techinfo">Тех. Инфо</a>
         </div>
                 
                 

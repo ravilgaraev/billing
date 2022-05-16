@@ -1053,6 +1053,14 @@ class Controller_Index extends Controller_Base {
         
     }
 
+    //Техническая информация
+    public function action_techinfo()
+    {
+        
+        $content = $content = View::factory('user_info/v_tech_info');
+        $this->template->content = $content;
+    }
+
     public function action_test()
     {
 //        $month = $this->request->query('month');

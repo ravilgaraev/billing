@@ -154,7 +154,7 @@ Route::set('index', '<action>(/<id>)', array('action' => 'allusers|userinfo|find
     . '|createotchet|usersschet|findschet|usersf|schetmany|dolshniki|spisanie|onetime'
     . '|delonetime|checkusername|userpre|deluserinfo|showdelsf|getbackdeluser|many'
     . '|table|cashschet|manydate|cleardatebase|nalotchet|newschet|createoneschetfakturi'
-    . '|prepade|printschetall|didox|renderall|delupload|sverka|delusernahren|regip'
+    . '|prepade|printschetall|didox|renderall|delupload|sverka|delusernahren|regip|techinfo'
     ))
         ->defaults(array(
             'controller' => 'index',
