@@ -279,7 +279,17 @@ class Controller_Index extends Controller_Base {
             {
                 $user = Model::factory('users')->get_user($user_name);
                 if(!isset($user[0]['username']))
-                    {$this->redirect('/edituser');}
+                    {
+                        $user_info = Model::factory('users')->get_deluser_info($user_name);
+                        if(isset($user_info['u'][0]['username']))
+                        {
+                            $content = '<div class="alert alert-danger text-center" role="alert">Абонент удалён</div>';
+                        }
+                        else 
+                        {
+                            $content = '<div class="alert alert-danger text-center" role="alert">Нет такого абонента</div>';
+                        }
+                    }
                 else {
                 $services = Model::factory('users')->get_services();
                 $servis = Model::factory('users')->get_user_services($user_name);
@@ -310,7 +320,16 @@ class Controller_Index extends Controller_Base {
             }
             else
             {
-                $this->redirect('/newuser?username='.$check_user_name);
+                var_dump($check_user_name);die;
+                $user_info = Model::factory('users')->get_deluser_info($check_user_name);
+                if(isset($user_info['u'][0]['username']))
+                {
+                    $content = '<div class="alert alert-danger text-center" role="alert">Абонент удалён</div>';
+                }
+                else 
+                {
+                    $this->redirect('/newuser?username='.$check_user_name);
+                }
             }
         }
         else 
@@ -719,13 +738,21 @@ class Controller_Index extends Controller_Base {
                 $user = Model::factory('users')->check_user($username);
                 if('' == $user[0]['username'])
                 {
-                    $content = View::factory('new_user/v_new_user',array('username' => $username));
+                    $user_info = Model::factory('users')->get_deluser_info($username);
+                    if(isset($user_info['u'][0]['username']))
+                    {
+                        $content = '<div class="alert alert-danger text-center" role="alert">Абонент с таким именем удален</div>';
+                    }
+                    else
+                    {
+                        $content = View::factory('new_user/v_new_user',array('username' => $username));
+                    }
                     $this->template->content = $content;
                 }
                 else
                 {
                     $this->template->content = 
-                            '<div class="alert alert-danger" role="alert">Такое имя уже существует</div>';
+                            '<div class="alert alert-danger text-center" role="alert">Такое имя уже существует</div>';
                 }
             }
             else 
